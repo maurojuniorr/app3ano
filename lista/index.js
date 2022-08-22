@@ -4,6 +4,17 @@ export default function ListaScreen({ navigation }) {
 	return (
 		<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
 			<Text>Lista Screen</Text>
+			<Button
+				title='Ir para Detalhes'
+				onPress={() => navigation.navigate('Detalhes')}
+			/>
+
+			<Button
+				title='Ir para Procurar'
+				onPress={() => navigation.navigate('Procurar')}
+			/>
+
+			<Button title='Ir para PDF' onPress={() => navigation.navigate('PDF')} />
 		</View>
 	);
 }

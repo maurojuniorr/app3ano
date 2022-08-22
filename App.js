@@ -6,6 +6,9 @@ import SignupScreen from './cadastro';
 import HomeScreen from './home';
 import ListaScreen from './lista';
 import CadastroScreen from './cadastroItem';
+import DetalhesScreen from './detalhes';
+import ProcurarScreen from './procurar';
+import PDFScreen from './PDF';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +25,12 @@ export default function App() {
 				<Stack.Screen name='Lista' component={ListaScreen} />
 
 				<Stack.Screen name='CadastroScreen' component={CadastroScreen} />
+
+				<Stack.Screen name='Detalhes' component={DetalhesScreen} />
+
+				<Stack.Screen name='Procurar' component={ProcurarScreen} />
+
+				<Stack.Screen name='PDF' component={PDFScreen} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);
