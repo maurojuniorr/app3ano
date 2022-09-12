@@ -1,13 +1,50 @@
-import { StyleSheet, Button, Text, View } from 'react-native';
+import {
+	SafeAreaView,
+	View,
+	StyleSheet,
+	Button,
+	TextInput,
+	Text,
+	TouchableOpacity,
+} from 'react-native';
 
 export default function SignupScreen({ navigation }) {
 	return (
 		<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
 			<Text> Aqui é a tela de cadastro</Text>
-			<Button
-				title='Ir para a tela de Login'
-				onPress={() => navigation.navigate('Login')}
+
+			<TextInput
+				style={styles.input}
+				placeholder='Insira seu usuario'
+				onChange={() => {}}
 			/>
+
+			<TextInput
+				style={styles.input}
+				placeholder='Insira sua senha'
+				onChange={() => {}}
+			/>
+			<TextInput
+				style={styles.input}
+				placeholder='Repita a sua senha'
+				onChange={() => {}}
+			/>
+
+			<Button title='Cadastrar' onPress={() => navigation.navigate('Login')} />
 		</View>
 	);
 }
+
+const styles = StyleSheet.create({
+	input: {
+		height: 50,
+		margin: 12,
+		borderWidth: 2,
+		padding: 10,
+	},
+	buttonTextRegister: {
+		color: '#4DAE4C',
+		fontSize: 18,
+		fontWeight: 'bold',
+	},
+});

@@ -13,8 +13,6 @@ export default function ListaScreen({ navigation }) {
 				title='Ir para Procurar'
 				onPress={() => navigation.navigate('Procurar')}
 			/>
-
-			<Button title='Ir para PDF' onPress={() => navigation.navigate('PDF')} />
 		</View>
 	);
 }
