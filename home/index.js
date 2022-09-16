@@ -1,5 +1,6 @@
 import { StyleSheet, Button, Text, View } from 'react-native';
 import ListaScreen from '../lista';
+import styles from './estilo';
 
 export default function HomeScreen({ navigation }) {
 	return (

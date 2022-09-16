@@ -1,4 +1,5 @@
 import { StyleSheet, Button, Text, View } from 'react-native';
+import styles from './estilo';
 
 export default function DetalhesScreen({ navigation }) {
 	return (

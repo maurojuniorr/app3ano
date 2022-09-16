@@ -8,6 +8,8 @@ import {
 	TouchableOpacity,
 } from 'react-native';
 
+import styles from './estilo';
+
 export default function SignupScreen({ navigation }) {
 	return (
 		<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -34,17 +36,3 @@ export default function SignupScreen({ navigation }) {
 		</View>
 	);
 }
-
-const styles = StyleSheet.create({
-	input: {
-		height: 50,
-		margin: 12,
-		borderWidth: 2,
-		padding: 10,
-	},
-	buttonTextRegister: {
-		color: '#4DAE4C',
-		fontSize: 18,
-		fontWeight: 'bold',
-	},
-});

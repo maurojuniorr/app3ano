@@ -7,7 +7,10 @@ import {
 	Text,
 	TouchableOpacity,
 } from 'react-native';
+
 import React from 'react';
+
+import styles from './estilo.js';
 
 export default function LoginScreen({ navigation }) {
 	const [text, onChangeText] = React.useState('Useless Text');
@@ -40,17 +43,3 @@ export default function LoginScreen({ navigation }) {
 		</SafeAreaView>
 	);
 }
-
-const styles = StyleSheet.create({
-	input: {
-		height: 50,
-		margin: 12,
-		borderWidth: 2,
-		padding: 10,
-	},
-	buttonTextRegister: {
-		color: '#4DAE4C',
-		fontSize: 18,
-		fontWeight: 'bold',
-	},
-});
