@@ -16,10 +16,10 @@ const Stack = createNativeStackNavigator();
 
 const Tab = createBottomTabNavigator();
 
-function Home() {
+function Tabs({navigation}) {
 	return (
 		<Tab.Navigator>
-			<Tab.Screen name='Home' component={HomeScreen} />
+			<Tab.Screen name='Inicio' component={HomeScreen} />
 			<Tab.Screen name='Lista' component={ListaScreen} />
 			<Tab.Screen name='Cadastro' component={CadastroScreen} />
 		</Tab.Navigator>
@@ -45,7 +45,7 @@ export default function App() {
 
 				<Stack.Screen
 					name='Home'
-					component={Home}
+					component={Tabs}
 					options={{ headerShown: false }}
 				/>
 				<Stack.Screen name='Detalhes' component={DetalhesScreen} />
