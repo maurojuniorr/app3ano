@@ -1,12 +1,16 @@
-import { StyleSheet, Button, Text, View } from 'react-native';
+import { StyleSheet, TouchableOpacity, Button, Text, View } from 'react-native';
 import styles from './estilo';
 
-export default function DetalhesScreen() {
-	// const { navigation } = this.props;
+
+
+export default function DetalhesScreen({navigation, route}) {
+	
 	return (
-		<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-			<Text>Detalhes Screen</Text>
-			{/* <Text style={styles.title}>{this.props.title}</Text>s */}
+		<View style={styles.container}>
+			<View style={styles.item}>	
+				<Text style={styles.title}>{route.params.item}</Text>			  
+			</View>
 		</View>
+		
 	);
 }

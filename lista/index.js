@@ -1,5 +1,5 @@
 import { Button, Text, View, FlatList,TouchableOpacity } from 'react-native';
-import styles from './estilo';
+import styles from './estilo'
 
 const DATA = [
 	{
@@ -54,20 +54,22 @@ const DATA = [
 			},
   ];
 
-;
 
-export default function ListaScreen({ navigation }) {
+
+export default function ListaScreen({ navigation}) {
 	
 	const lista = ({item}) => ( //função de renderizar a lista
 		
 		<View style={styles.item}> 
 	  		
-			  <TouchableOpacity onPress={(props) => navigation.navigate('Detalhes')} style={styles.title}>
+			  <TouchableOpacity onPress={() => navigation.navigate('Detalhes',{item: item.title})}>
 			  	<Text style={styles.title}>{item.title}</Text>
+				
 			  </TouchableOpacity>
-			
+			  
 		</View>
-	);
+		
+	); 
 
 	return (
 		<View style={styles.container}>
