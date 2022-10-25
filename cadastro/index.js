@@ -17,7 +17,12 @@ export default function SignupScreen({ navigation }) {
 
 			<TextInput
 				style={styles.input}
-				placeholder='Insira seu usuario'
+				placeholder='Insira seu Nome'
+				onChange={() => {}}
+			/>
+			<TextInput
+				style={styles.input}
+				placeholder='Insira seu Email'
 				onChange={() => {}}
 			/>
 

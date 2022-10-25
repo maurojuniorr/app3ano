@@ -11,4 +11,11 @@ export default StyleSheet.create({
 		fontSize: 18,
 		fontWeight: 'bold',
 	},
+	textContainer: {
+		color: 'red',
+		fontSize: 18,
+		paddingLeft: '10%',
+		paddingRight: '10%',
+	},
+	container: { flex: 1, alignItems: 'center', justifyContent: 'center' },
 });

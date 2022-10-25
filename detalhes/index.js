@@ -8,7 +8,7 @@ export default function DetalhesScreen({navigation, route}) {
 	return (
 		<View style={styles.container}>
 			<View style={styles.item}>	
-				<Text style={styles.title}>{route.params.item}</Text>			  
+				<Text style={styles.title}>{[route.params.convoy]}</Text>			  
 			</View>
 		</View>
 		

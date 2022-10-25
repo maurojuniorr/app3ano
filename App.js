@@ -16,7 +16,7 @@ const Stack = createNativeStackNavigator();
 
 const Tab = createBottomTabNavigator();
 
-function Tabs({navigation}) {
+function Tabs({ navigation }) {
 	return (
 		<Tab.Navigator>
 			<Tab.Screen name='Inicio' component={HomeScreen} />
@@ -51,6 +51,7 @@ export default function App() {
 				<Stack.Screen name='Detalhes' component={DetalhesScreen} />
 				<Stack.Screen name='Procurar' component={ProcurarScreen} />
 				<Stack.Screen name='PDF' component={PDFScreen} />
+				<Stack.Screen name='Cadastro' component={CadastroScreen} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);
