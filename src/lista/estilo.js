@@ -5,13 +5,15 @@ export default StyleSheet.create({
 		marginTop: StatusBar.currentHeight || 0,
 	  },
 	  item: {
-		backgroundColor: '#f9c2ff',
-		padding: 20,
+		backgroundColor: '#4DAE4C',
+		padding: 24,
+		borderRadius: 12,
 		marginVertical: 8,
 		marginHorizontal: 16,
 	  },
 	  title: {
-		fontSize: 32,
+		fontSize: 20,
+		color: 'white'
 	  },
 	  botao:{
 		backgroundColor: 'blue'

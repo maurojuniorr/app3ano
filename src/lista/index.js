@@ -54,14 +54,15 @@ const DATA = [
 	},
 ];
 
-export default function ListaScreen({ navigation }) {
+export default function ListaScreen({ navigation, route }) {
 	const lista = (
-		{ item } //função de renderizar a lista
+		{ item } 
 	) => (
 		<View style={styles.item}>
 			<TouchableOpacity
-				onPress={() => navigation.navigate('Detalhes', { convoy: item.title })}>
-				<Text style={styles.title}>{item.title}</Text>
+				onPress={() => navigation.navigate('Detalhes', { item: item.title })}>
+				<Text style={styles.title}>{item.title } </Text>
+				
 			</TouchableOpacity>
 		</View>
 	);
@@ -69,9 +70,9 @@ export default function ListaScreen({ navigation }) {
 	return (
 		<View style={styles.container}>
 			<FlatList
-				data={DATA} //Lê o data frame
-				renderItem={lista} //chama a função renderizar
-				keyExtractor={(item) => item.id} //identifica a chave unica do DF
+				data={DATA} 
+				renderItem={lista} 
+				keyExtractor={(item) => item.id} 
 			/>
 		</View>
 	);

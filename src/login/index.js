@@ -14,12 +14,14 @@ import React, { useState } from 'react';
 import styles from './estilo.js';
 import api from '../service/api'
 
+
 export default function LoginScreen({ navigation }) {
 	
 	const [email, setEmail] = useState(''); //variaveis de estado podem mudar em tempo de execução
 	const [password, setPassword] = useState('');
 	const [status, setStatus] = useState('')
-
+	const [userId, setUserId] = useState('')
+	
 	async function autenticar() {
 
 		try {
@@ -32,8 +34,11 @@ export default function LoginScreen({ navigation }) {
 			
 		
 			if (response.status === 200) {
-				navigation.navigate('Home');
+			
+				// setUserId(response.data.user._id);
+				global.userId = response.data.user._id
 				
+				navigation.navigate('Home');				
 			}
 
 		} catch (error) {
@@ -69,10 +74,17 @@ export default function LoginScreen({ navigation }) {
 					onChangeText={setPassword}
 				/>
 			</View>
-			<View style={styles.buttonContainer}>
-				<Button title='Entrar' onPress={() => autenticar()} />
+			
 
-				<Text>Não tem cadastro?</Text>
+			<View style={styles.buttonContainer}>
+				<TouchableOpacity 
+					style={styles.buttonCadastrar}
+					onPress={() => autenticar()}>
+					<Text style={styles.title}>Entrar</Text>
+				</TouchableOpacity>		
+				
+
+				<Text style={styles.inputLabel}>Não tem cadastro?</Text>
 
 				<TouchableOpacity onPress={() => navigation.navigate('Signup')}>
 					<Text style={styles.buttonTextRegister}>Registrar-se</Text>

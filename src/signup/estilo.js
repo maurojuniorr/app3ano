@@ -13,11 +13,13 @@ export default StyleSheet.create({
 	inputLabel:{
 		paddingLeft:'13px',
 		fontWeight:'bold',
-		fontSize: 18
+		fontSize: 18,
+		color: '#4DAE4C'
+
 	},
 	inputContainer: {
-		flex: 1,
-		backgroundColor: 'yellow',
+		// flex: 1,
+		// backgroundColor: 'yellow',
 		paddingLeft: '10%',
 		paddingRight: '10%',
 		justifyContent: 'center',
@@ -26,17 +28,40 @@ export default StyleSheet.create({
 		flex: 1,
 		marginTop: '10%',
 		marginBottom: '10%',
-		width: '100/%',
+		marginLeft: '20%',
+		marginRight: '20%',
+		width: '10/%',
 		resizeMode: 'contain',
 	},
-	buttonTextRegister: {
+	signupButton: {
+		color: '#4DAE4C',
+		fontSize: 18,
+		marginBottom: "10%",
+		fontWeight: 'bold',
+	},
+	buttonTextLogin: {
 		color: '#4DAE4C',
 		fontSize: 18,
 		fontWeight: 'bold',
+		marginTop:'8%'
+	},
+	buttonCadastrar: {
+		backgroundColor: '#4DAE4C',
+		marginBottom: "10%",
+		borderRadius: 12,
+		width: '75%',
+		height: '50px',
+		alignItems: 'center',
+		justifyContent: 'center'
+	  },
+	  title: {
+		fontSize: 20,
+		color: 'white'
+
 	},
 	buttonContainer: {
 		flex: 1,
-		backgroundColor: 'red',
+		// backgroundColor: 'red',
 		alignItems: 'center',
 		justifyContent: 'center',
 	},

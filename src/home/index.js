@@ -3,7 +3,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import ListaScreen from '../lista';
 import styles from './estilo';
 
-export default function HomeScreen({ navigation }) {
+export default function HomeScreen({ navigation,route }) {
 	return (
 		<SafeAreaView style={styles.container}>
 			<View style={styles.textContainer}>
