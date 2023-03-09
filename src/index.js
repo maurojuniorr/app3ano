@@ -1,58 +1,23 @@
-import { NavigationContainer } from '@react-navigation/native'; //essa é uma
-import { createNativeStackNavigator } from '@react-navigation/native-stack'; // essa é outra
+import { StatusBar } from 'expo-status-bar'; //importações de componentes e biliotecas
+import { StyleSheet,Text, View } from 'react-native';
+import Login from './Login';
+import Signup from './Signup';
 
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+export default function MeuApp() { 
+    return (
+        
+      <View style={estilo.container}> 
+          <Login/>
+        
+     
+      </View>      
+    );
+  }
 
-import LoginScreen from './login/index';
-import SignupScreen from './signup';
-import HomeScreen from './home';
-import ListaScreen from './lista';
-import CadastroScreen from './cadastroItem';
-import DetalhesScreen from './detalhes';
-import ProcurarScreen from './procurar';
-import PDFScreen from './PDF';
-
-const Stack = createNativeStackNavigator();
-
-const Tab = createBottomTabNavigator();
-
-function Tabs({ navigation }) {
-	return (
-		<Tab.Navigator initialRouteName='Feed'>
-			<Tab.Screen name='Sobre' component={HomeScreen} />
-			<Tab.Screen name='Feed' component={ListaScreen} />
-			<Tab.Screen name='Cadastro' component={CadastroScreen} />
-		</Tab.Navigator>
-	);
-}
-
-export default function MeuApp() {
-	return (
-		<NavigationContainer>
-			<Stack.Navigator initialRouteName='Login'>
-				<Stack.Screen
-					name='Login'
-					component={LoginScreen}
-					options={{ headerShown: false }}
-					s
-				/>
-
-				<Stack.Screen
-					name='Signup'
-					component={SignupScreen}
-					options={{ headerShown: false }}
-				/>
-
-				<Stack.Screen
-					name='Home'
-					component={Tabs}
-					options={{ headerShown: false }}
-				/>
-				<Stack.Screen name='Detalhes' component={DetalhesScreen} />
-				<Stack.Screen name='Procurar' component={ProcurarScreen} />
-				<Stack.Screen name='PDF' component={PDFScreen} />
-				<Stack.Screen name='Cadastro' component={CadastroScreen} />
-			</Stack.Navigator>
-		</NavigationContainer>
-	);
-}
+const estilo = StyleSheet.create({
+	container:{ 
+		flex:1,
+		backgroundColor: '#fff'
+	}
+	
+});
