@@ -1,19 +1,18 @@
-import {View, StyleSheet } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import MeuApp from './src';
-
 export default function App() {
-  return (
-	
-    
-	<View style={estilo.container}>  
-		<MeuApp/>
-    </View> 
-	
-  );
+	return (
+		<View style={styles.container}>
+			<MeuApp />
+		</View>
+	);
 }
 
-const estilo = StyleSheet.create({ //Meu conjunto de estilos
-	container:{ 
-		flex:1,
-	}
+const styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		backgroundColor: '#fff',
+		alignItems: 'center',
+		justifyContent: 'center',
+	},
 });
