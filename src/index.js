@@ -1,25 +1,38 @@
-import { StyleSheet, View } from 'react-native';
-//importe o modulo {Stylesheet} da biblioteca 'react-native'
-import Login from './login';
-//importe o componente Login da pasta './login'
-import Signup from './signup';
-//Aqui embaixo é a função padrão do componente
-//export deixa a função MeuApp() pública
-//default faz com que a função se torne a principal
-//essa função sempre precisa retornar algo
-//nesse caso está retornando a View container
-//dentro da View container existe o componente Login
-export default function MeuApp() {
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+import LoginScreen from './login';
+import SignupScreen from './signup';
+import FeedScreen from './feed';
+import CadastroScreen from './cadastro';
+import DetalhesScreen from './detalhes';
+import SearchScreen from './procurar';
+
+const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
+
+function Tabs({ navigation }) {
 	return (
-		<View style={styles.container}>
-			<Login />
-		</View>
+		<Tab.Navigator initialRouteName='Feed'>
+			<Tab.Screen name='Procurar' component={SearchScreen} />
+			<Tab.Screen name='Feed' component={FeedScreen} />
+			<Tab.Screen name='Cadastro' component={RegisterScreen} />
+		</Tab.Navigator>
 	);
 }
-//Temos o conjunto de estilos
-//ele retorna um objeto JSON
-const styles = StyleSheet.create({
-	container: {
-		flex: 1, //<<<<< FlexBox
-	},
-});
+
+export default function MeuApp() {
+	return (
+		<NavigationContainer>
+			<Stack.Navigator initialRouteName='Login'>
+				<Stack.Screen name='Login' component={LoginScreen} />
+				<Stack.Screen name='Signup' component={SignupScreen} />
+				<Stack.Screen name='Home' component={Tabs} />
+				<Stack.Screen name='Detalhes' component={DetalhesScreen} />
+				<Stack.Screen name='Procurar' component={SearchScreen} />
+				<Stack.Screen name='Cadastro' component={CadastroScreen} />
+			</Stack.Navigator>
+		</NavigationContainer>
+	);
+}
